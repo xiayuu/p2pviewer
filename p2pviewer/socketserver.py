@@ -54,7 +54,7 @@ class LogRecordSocketReceiver(SocketServer.ThreadingTCPServer):
 
     allow_reuse_address = 1
 
-    def __init__(self, host='localhost',
+    def __init__(self, host='0.0.0.0',
                  port=logging.handlers.DEFAULT_TCP_LOGGING_PORT,
                  handler=LogRecordStreamHandler):
         SocketServer.ThreadingTCPServer.__init__(self, (host, port), handler)
